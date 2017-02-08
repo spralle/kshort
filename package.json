@@ -1,0 +1,38 @@
+{
+  "name": "kshort",
+  "version": "1.0.0",
+  "description": "Eppstein's k shortest paths in Javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test --recursive --compilers js:babel-core/register --timeout 10000 --require babel-polyfill",
+    "test.watch": "mocha test --watch --color --recursive --compilers js:babel-core/register --timeout 10000 --require babel-polyfill",
+    "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- --recursive test -u exports -R spec",
+    "coverage-start": "istanbul cover node_modules/mocha/bin/_mocha test --recursive -- -u exports -R spec && start coverage/lcov-report/index.html",
+    "lint": "eslint ./lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spralle/kshort.git"
+  },
+  "author": "sprawl@onlajn.nu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/spralle/kshort/issues"
+  },
+  "homepage": "https://github.com/spralle/kshort#readme",
+  "devDependencies": {
+    "eslint": "^3.15.0",
+    "mocha": "^3.2.0",
+    "should": "^11.2.0",
+    "babel-core": "^6.0.20",
+    "babel-eslint": "^4.1.3",
+    "babel-loader": "^6.0.1",
+    "babel-preset-es2015": "^6.0.15",
+    "babel-preset-stage-0": "^6.0.15",
+    "eslint-config-surikat": "^1.1.1",
+    "istanbul": "^0.4.5"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.22.0"
+  }
+}
