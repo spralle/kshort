@@ -1,6 +1,4 @@
 import epps from '../src/epps';
-import dijkstra from '../src/dijkstra';
-import {reverse} from '../src/graph'
 // original eppstein graph
 const graph = {
   A: {B: 2, E: 13},
@@ -19,6 +17,6 @@ const graph = {
 
 describe('epps', function() {
   it('should work', function() {
-    console.log(dijkstra(reverse(graph), 'L'));
+    console.log(epps(graph, 'A', 'L'));
   });
 });
