@@ -29,8 +29,7 @@ function calculateSidetrackCost(graph, tree) {
       const treeToNode = tree[edge.to]
       // sidetrack cost is the additional total cost it would be to travel this path
       //sidetracks.push({ from: edge.from, to: edge.to, cost: edge.cost - treeFromNode[0] + treeToNode[0] });
-      sidetracks[edge.from] = sidetracks[edge.from] | {};
-      console.log(sidetracks, edge.from, edge.to);
+      sidetracks[edge.from] = sidetracks[edge.from] || {};
       sidetracks[edge.from][edge.to] = edge.cost - treeFromNode[0] + treeToNode[0];
     }
   });
