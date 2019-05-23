@@ -35,3 +35,11 @@ function calculateSidetrackCost(graph, tree) {
   });
   return sidetracks;
 }
+
+function findBestSidetrack(sidetracks, s) {
+  console.log('ST', sidetracks);
+}
+
+function generateOutHeap(graph, tree, sidetracks, s) {
+  const heap = new Heap();
+}
